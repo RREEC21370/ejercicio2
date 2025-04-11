@@ -1,3 +1,10 @@
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
 
 
 function buscarElemento(arr, elemento) {
@@ -133,14 +140,9 @@ function EncontrarMultp5(array) {
 const numeros = [12, 22, 35, 40, 51, 60];
 console.log( `El primer mltiplo de 5 en el array es: ${EncontrarMultp5(numeros)}`); // Resultado
 
-/*
-//Tabla de multiplicar de un numero del 1 al 10
-const readline = require('readline');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+//Tabla de multiplicar de un numero del 1 al 10
+/*
 
 rl.question('Ingresa un número: ', (input) => {
   const numero = parseInt(input);
@@ -155,8 +157,10 @@ rl.question('Ingresa un número: ', (input) => {
   }
   rl.close();
 });
-*/
+5**/
+
 // Generar una frecuencia de fibonacci
+
 
 fibonacci();
 function fibonacci(){
@@ -173,3 +177,125 @@ function fibonacci(){
 }
 }
 
+//16 
+/*
+//EJERCICIO 16:
+//Sumar solo los numeros impares entre 1 y 50:
+let suma = 0;
+
+for (let i = 1; i <= 50; i++) {
+   
+    if (i % 2 !== 0) { // Verifica si el número es impar.
+        suma += i;
+        }
+        while (suma > 500) {
+            console.log("La suma supera 500. Proceso detenido.");
+                break;
+        }
+        if (suma>500){
+            break;
+        }
+}
+
+console.log(`Suma final: ${suma}`);
+*/
+/*
+//12
+GenNumRandom()
+
+function GenNumRandom() {
+    const secreto = Math.floor(Math.random() * 10) + 1;
+  
+    const preguntar = () => {
+      rl.question('Adivina el número (1 al 10): ', (respuesta) => {
+        const intento = parseInt(respuesta);
+        if (intento === secreto) {
+          console.log('¡Correcto!');
+          ejercicio13(); // Continuar con el siguiente
+        } else {
+          console.log('Incorrecto. Intenta de nuevo.');
+          preguntar();
+        }
+      });
+    };
+  
+    preguntar();
+  }
+
+*/
+
+
+
+
+  //13
+ejercicio13();
+  function ejercicio13() {
+    rl.question('Ingresa un número para contar regresivamente: ', (respuesta) => {
+        let numero = parseInt(respuesta);
+        while (numero >= 0) {
+          console.log(numero);
+          numero--;
+        }
+        rl.close();
+      });
+
+    }
+
+
+/*
+  //14
+ ejercicio14();
+  function ejercicio14() {
+    
+  let numero;
+
+function pedirNumero() {
+  rl.question('Ingresa un número mayor que 0: ', (respuesta) => {
+    numero = parseInt(respuesta);
+    if (numero > 0) {
+      console.log(`Número válido: ${numero}`);
+      rl.close();
+    } else {
+      console.log('Número inválido, intenta de nuevo.');
+      pedirNumero();
+    }
+  });
+}
+
+pedirNumero();
+    
+  }
+*/
+
+/*
+  //15
+  function mostrarMenu() {
+    console.log('\n--- MENÚ ---');
+    console.log('1. Saludar');
+    console.log('2. Mostrar fecha');
+    console.log('3. Salir');
+  
+    readline.question('Elige una opción: ', (opcion) => {
+      switch (opcion) {
+        case '1':
+          console.log('¡Hola!');
+          mostrarMenu();
+          break;
+        case '2':
+          console.log(`Fecha actual: ${new Date().toLocaleDateString()}`);
+          mostrarMenu();
+          break;
+        case '3':
+          console.log('¡Hasta luego!');
+          readline.close();
+          break;
+        default:
+          console.log('Opción inválida.');
+          mostrarMenu();
+      }
+    });
+  }
+  
+  mostrarMenu();
+}
+  */
